@@ -18,10 +18,17 @@
         margin-right: 40px;
       }
     }
+    @include _479 {
+      width: 300px;
+      height: auto;
+    }
   }
   &__info-block {
     padding: 30px 40px;
     width: calc(100% - 409px);
+    @include _479 {
+      width: calc(100% - 300px);
+    }
     h1 {
       font-weight: 800;
       font-size: 50px;
@@ -183,6 +190,12 @@
   }
   @include _810 {
     width: 411px;
+    margin: 0 auto;
+    height: auto;
+    flex-direction: column;
+  }
+  @include _479 {
+    width: 300px;
     margin: 0 auto;
     height: auto;
     flex-direction: column;
