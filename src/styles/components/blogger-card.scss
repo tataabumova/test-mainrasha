@@ -58,6 +58,9 @@
         height: auto;
         line-height: 46px;
       }
+      @include _479 {
+        font-size: 41px;
+      }
     }
     @include _880 {
       @include _811 {
@@ -113,6 +116,9 @@
         margin-right: 0;
       }
     }
+    @include _479 {
+      margin-right: 5px;
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -121,6 +127,10 @@
       font-weight: bold;
       font-size: 30px;
       line-height: 37px;
+
+      @include _479 {
+        font-size: 24px;
+      }
     }
     span {
       font-weight: 500;
@@ -175,6 +185,11 @@
     font-size: 30px;
     line-height: 37px;
     margin-bottom: 10px;
+
+    @include _479 {
+      font-size: 26px;
+      line-height: 30px;
+    }
   }
   &__description-text {
     font-weight: 500;
