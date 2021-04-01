@@ -1,0 +1,190 @@
+.blogger-card {
+  display: flex;
+  height: 572px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid $main-text-color;
+  backdrop-filter: blur(5px);
+
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 5px;
+  &--margin-top {
+    margin-top: 50px;
+  }
+  &__photo {
+    width: 409px;
+    @include _880 {
+      @include _811 {
+        float: left;
+        margin-right: 40px;
+      }
+    }
+  }
+  &__info-block {
+    padding: 30px 40px;
+    width: calc(100% - 409px);
+    h1 {
+      font-weight: 800;
+      font-size: 50px;
+      line-height: 61px;
+      margin: 0;
+      height: 61px;
+      @include _1062 {
+        height: 34px;
+        font-size: 46px;
+        line-height: 34px;
+      }
+      @include _881 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      @include _880 {
+        @include _811 {
+          font-size: 46px;
+          line-height: 46px;
+          height: auto;
+          max-height: 92px;
+          overflow: hidden;
+        }
+      }
+      @include _810 {
+        height: auto;
+        line-height: 46px;
+      }
+    }
+    @include _880 {
+      @include _811 {
+        width: 100%;
+      }
+    }
+    @include _810 {
+      width: 100%;
+    }
+  }
+  hr {
+    width: 100%;
+    height: 0;
+    border: 1px solid $main-text-color;
+    margin: 30px 0;
+    @include _1062 {
+      margin: 27px 0;
+    }
+    @include _880 {
+      @include _811 {
+        display: inline-block;
+        width: calc(100% - 409px - 2px);
+      }
+    }
+  }
+  &__params {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    //height: 158px;
+    @include _1062 {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+    @include _880 {
+      @include _811 {
+        height: 357px;
+        justify-content: center;
+      }
+    }
+  }
+  &__params-item {
+    height: 64px;
+    position: relative;
+    padding-left: 84px;
+    margin-bottom: 30px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    @include _1210 {
+      &:nth-child(2n + 2) {
+        margin-right: 0;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    p {
+      margin: 0;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 37px;
+    }
+    span {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.05em;
+    }
+    &--ytb {
+      background: url("/public/images/icons/icon-ytb-color.svg") no-repeat left center;
+    }
+    &--vk {
+      background: url("/public/images/icons/icon-vk-color.svg") no-repeat left center;
+    }
+    &--inst {
+      background: url("/public/images/icons/icon-inst-color.svg") no-repeat left center;
+    }
+    @include _1062 {
+      @include _881 {
+        height: 52px;
+        background-size: 52px;
+        margin-bottom: 20px;
+      }
+    }
+    @include _880 {
+      @include _811 {
+        margin-right: 0;
+      }
+    }
+    @media screen and (min-width: 1063px) and (max-width: 1077px) {
+      margin-right: 34px;
+    }
+    @media screen and (min-width: 1141px) and (max-width: 1154px) {
+      margin-right: 34px;
+    }
+  }
+  &__description {
+    height: 170px;
+    max-height: 170px;
+    position: relative;
+
+    .vertical-container {
+      height: 100%;
+
+      .swiper-slide {
+        height: auto;
+        padding-right: 30px;
+      }
+    }
+  }
+  &__description-title {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    margin-bottom: 10px;
+  }
+  &__description-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+  }
+  @include _880 {
+    @include _811 {
+      display: block;
+      height: auto;
+    }
+  }
+  @include _810 {
+    width: 411px;
+    margin: 0 auto;
+    height: auto;
+    flex-direction: column;
+  }
+}

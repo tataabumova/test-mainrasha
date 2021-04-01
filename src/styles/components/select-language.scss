@@ -1,0 +1,25 @@
+.select-language {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 98px;
+  &__button {
+    label {
+      font-weight: 600;
+    }
+    input {
+      display: none;
+      &:checked ~ label {
+        font-weight: 400;
+        pointer-events: none;
+      }
+    }
+  }
+  p {
+    margin: 0 5px;
+  }
+  @include _880 {
+    margin-left: auto;
+    margin-right: 50px;
+  }
+}

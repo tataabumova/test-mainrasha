@@ -1,0 +1,18 @@
+.wrapper {
+  margin: 0 auto;
+  padding: 0 68px;
+  max-width: 1440px;
+  font-weight: $font-weight;
+  line-height: $line-height;
+
+  @include _1140 {
+    padding: 0 30px;
+  }
+  @include _767 {
+    padding: 0 20px;
+    min-width: 480px;
+  }
+  @include _479 {
+    min-width: 375px;
+  }
+}

@@ -1,0 +1,75 @@
+.blogger {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  @include _690 {
+    justify-content: center;
+  }
+  @include _1140 {
+    justify-content: space-around;
+  }
+  &__item {
+    width: 311px;
+    height: 311px;
+    position: relative;
+    &--section-blogger {
+      margin: 0 10px;
+      margin-bottom: 50px;
+    }
+    &--empty {
+      height: 0;
+      margin: 0 10px;
+      pointer-events: none;
+    }
+    @include _881 {
+      &:hover {
+        box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.25);
+        .blogger__data {
+          opacity: 0;
+        }
+      }
+    }
+  }
+  &__data {
+    width: 311px;
+    height: 311px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(189, 28, 159, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px 12px;
+    transition: opacity 1s ease;
+  }
+  &__name {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    margin-bottom: 10px;
+  }
+  &__params {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__params-item {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    position: relative;
+    padding-left: 34px;
+    margin-bottom: 10px;
+    &--ytb {
+      background: url("/public/images/icons/icon-ytb.svg") no-repeat left center;
+    }
+    &--vk {
+      background: url("/public/images/icons/icon-vk.svg") no-repeat left center;
+    }
+    &--inst {
+      background: url("/public/images/icons/icon-inst.svg") no-repeat left center;
+    }
+  }
+}
